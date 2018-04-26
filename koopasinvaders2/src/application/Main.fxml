@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="607.0" layoutX="-8.0" layoutY="-3.0">
+         <image>
+            <Image url="@koopasinvadersmenuscreenshot.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonPlay" layoutX="251.0" layoutY="168.0" mnemonicParsing="false" onAction="#handle" opacity="0.0" prefHeight="56.0" prefWidth="121.0" textFill="WHITE" />
+      <Button fx:id="buttonHelp" layoutX="252.0" layoutY="250.0" mnemonicParsing="false" onAction="#handle" opacity="0.0" prefHeight="56.0" prefWidth="121.0" />
+      <Button fx:id="buttonExit" layoutX="252.0" layoutY="339.0" mnemonicParsing="false" onAction="#handle" opacity="0.0" prefHeight="56.0" prefWidth="121.0" />
+   </children>
+</AnchorPane>
