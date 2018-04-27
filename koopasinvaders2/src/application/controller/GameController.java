@@ -18,16 +18,29 @@ import javafx.stage.Stage;
 
 public class GameController implements EventHandler<KeyEvent>, Initializable{
    
+	public int i;
 	@FXML
-	ImageView marioId;
+	public ImageView marioId;
+	public  ImageView getMarioId() { return marioId; }
+	public void setMarioId(ImageView img) {marioId = img;};
 	@FXML
-	ImageView bowserId;
+	private ImageView bowserId;
 	@FXML
 	AnchorPane pane;
 	
 	@Override
 	public void handle(KeyEvent event) {
-		System.out.println("Hello?");
+		if(i == 0) {
+		marioId = new ImageView("/bowser1.png");
+		marioId.setLayoutX(280.0);
+		marioId.setLayoutY(341.0);
+		marioId.setFitHeight(45.0);
+		marioId.setFitHeight(37.0);
+		marioId.setPickOnBounds(true);
+		}
+		i++;
+		
+		System.out.println("\n"+i);
 		// S, L, R, P
 		String key = event.getCode().toString();
 		System.out.println(key+"works");
@@ -51,6 +64,7 @@ public class GameController implements EventHandler<KeyEvent>, Initializable{
 	} 
 	
 	public void updateImageView(char c) {
+		
 		if(marioId == null)
 			System.out.println("\n\nnull");
 		double dx = marioId.getLayoutX();
@@ -62,11 +76,18 @@ public class GameController implements EventHandler<KeyEvent>, Initializable{
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		//Main.stage.getScene().setOnKeyPressed(new GameController());
+		
+		/*
+		ImageView img = new ImageView("File:/mario.png");
+		img.setLayoutX(480.0);
+		img.setLayoutY(341.0);
+		marioId = img;
 		//Main.stage.getScene().getRoot().requestFocus();
-		marioId = new ImageView("/mario.png");
+		//marioId = new ImageView("/mario.png");
 		//marioId.setImage(image1);
-		marioId.setLayoutX(280.0);
-		marioId.setLayoutY(341.0);
+		//marioId.setLayoutX(280.0);
+		//marioId.setLayoutY(341.0);
 		
 		/*
 		Scene scene = (Main.stage.getScene());
