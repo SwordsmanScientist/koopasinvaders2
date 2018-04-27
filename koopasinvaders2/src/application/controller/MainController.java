@@ -30,6 +30,7 @@ public class MainController implements EventHandler<ActionEvent> {
 				AnchorPane root = new AnchorPane();
 				root = FXMLLoader.load(getClass().getResource("/Game.fxml"));
 				Scene scene = new Scene(root);
+				scene.setOnKeyPressed( new GameController() );
 				//scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
 				Main.stage.setScene(scene);
 			}catch (IOException e) {

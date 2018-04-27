@@ -3,6 +3,8 @@
  */
 package application;
 
+import application.controller.GameController;
+import application.controller.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -23,6 +25,7 @@ public class Main extends Application {
 			AnchorPane root = new AnchorPane();
 			root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 			Scene scene = new Scene(root);
+			scene.setOnKeyPressed( new GameController() );
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
