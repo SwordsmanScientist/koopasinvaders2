@@ -1,3 +1,6 @@
+/**Koopa
+ * 
+ */
 package application;
 
 import javafx.application.Application;
@@ -18,9 +21,9 @@ public class Main extends Application {
 		try {
 			stage = primaryStage;
 			AnchorPane root = new AnchorPane();
-			root = FXMLLoader.load(getClass().getResource("/Start.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
 			stage.show();
 		} catch(Exception e) {
