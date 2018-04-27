@@ -1,4 +1,5 @@
 /Game.fxml
+/Help.png
 /Thumbs.db
 /application/
 /bowser1.png
@@ -10,5 +11,8 @@
 /newhelpbutton.png
 /newplaybutton.png
 /starsbackgroundbiggest.png
+<<<<<<< HEAD
 /Help.png
+=======
+>>>>>>> branch 'master' of https://github.com/SwordsmanScientist/KoopasInvaders2/
 /Help.fxml
